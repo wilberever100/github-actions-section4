@@ -1,5 +1,25 @@
 name: Events Demo 1
-on: ...
+# on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - 'dev-*' #Any pattern without slashes
+      - 'feat/**' # Matches any branch whose name starts with 'feat/' and other slashes in
+
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+    paths-ignore: # Will ignore all branches that contains  changes in this:
+      - '.github/workflows/*'
+    # paths: #This means that all branches that contains at least 1 file of this will be trigger this
+    #   - 'src/**'
+  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
