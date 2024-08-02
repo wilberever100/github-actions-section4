@@ -29,7 +29,7 @@ jobs:
         run: npm run build
       - name: Publish JS filename
         id: publish_filename
-        run: find  dist/assets/*.js -type -f -execdir echo 'something-else={}' >> $GITHUB_OUTPUT ';'
+        run: find  dist/assets/*.js -type f -execdir echo 'something-else={}' >> $GITHUB_OUTPUT ';'
         # run: find  dist/assets/*.js -type -f -execdir echo '::set-output name=something-else::{}' ';'
   #Save artifacts:
       - name: Upload artifacts
