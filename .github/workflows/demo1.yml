@@ -1,12 +1,12 @@
 name: Events Demo 1
 # on: [push, workflow_dispatch]
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    branches:
-      - main
-      - 'dev-*' #Any pattern without slashes
-      - 'feat/**' # Matches any branch whose name starts with 'feat/' and other slashes in
+  # pull_request:
+  #   types: [opened, synchronize, reopened]
+  #   branches:
+  #     - main
+  #     - 'dev-*' #Any pattern without slashes
+  #     - 'feat/**' # Matches any branch whose name starts with 'feat/' and other slashes in
 
   workflow_dispatch:
   push:
