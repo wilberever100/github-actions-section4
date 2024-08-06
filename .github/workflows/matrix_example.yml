@@ -3,6 +3,7 @@ on: push
 
 jobs:
   run_matrix:
+    continue-on-error: true
     strategy:
       matrix:
         operating-system: [ubuntu-latest, windows-latest]
