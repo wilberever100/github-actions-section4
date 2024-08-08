@@ -1,0 +1,7 @@
+name: 'Deploy to AWS S3'
+description: 'Deploy a static website to an S3 bucket'
+runs:
+  using: 'node16'
+  # pre:
+  main: 'main.js'
+  # post:

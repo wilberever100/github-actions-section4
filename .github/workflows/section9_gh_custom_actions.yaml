@@ -72,3 +72,9 @@ jobs:
         run: |
           echo "This is a report job"
           echo ${{toJSON(github)}}
+
+  information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output event data
+        uses: ./.github/actions/deploy-s3-javascript
