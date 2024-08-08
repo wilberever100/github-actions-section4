@@ -76,5 +76,8 @@ jobs:
   information:
     runs-on: ubuntu-latest
     steps:
+      - name: Get the Code
+        uses: actions/checkout@v3
+
       - name: Output event data
         uses: ./.github/actions/deploy-s3-javascript
